@@ -1,14 +1,26 @@
 package com.example.superheroes.model;
 
+import javax.persistence.*;
+import javax.validation.constraints.NotNull;
 import java.util.List;
 
+@Entity
 public class SuperHeroDTO {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Long id;
+
+    @NotNull
     String alias;
+    @NotNull
     String name;
     String origin;
+    @ElementCollection
     List<String> powers;
+    @ElementCollection
     List<String> weapons;
+    @ElementCollection
     List<String> associations;
 
     public SuperHeroDTO(String alias, String name, String origin, List<String> powers, List<String> weapons, List<String> associations) {
@@ -18,6 +30,10 @@ public class SuperHeroDTO {
         this.powers = powers;
         this.weapons = weapons;
         this.associations = associations;
+    }
+
+    public SuperHeroDTO() {
+
     }
 
     public String getAlias() {
