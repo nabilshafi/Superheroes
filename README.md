@@ -19,6 +19,8 @@
 - GET  http://localhost:8081/superHero/{name}
 
 - POST http://localhost:8081/superhero
+
+
    {
              "name" : "ironman",
              "alias" : "tonystark",
