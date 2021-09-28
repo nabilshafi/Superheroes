@@ -12,14 +12,14 @@ import javax.validation.Valid;
 @RestController
 public class SuperheroController {
 
-    @PostMapping("/testcases")
+    @PostMapping("/superhero")
     public  ResponseEntity<String> createTestCase(@RequestBody SuperHeroDTO superHeroDTO) {
         
         return new ResponseEntity<String>("Successful", HttpStatus.CREATED);
     }
 
-    @GetMapping("/superHero//{name}")
-    public ResponseEntity<SuperHeroDTO> listAllCategoriesByName(@PathVariable("name") String name) {
+    @GetMapping("/superHero/{name}")
+    public ResponseEntity<SuperHeroDTO> getSuperhero(@PathVariable("name") String name) {
 
         SuperHeroDTO superHeroDTO = null;
 
