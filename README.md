@@ -3,7 +3,6 @@
 
 # Instruction
 
-- git clone https://github.com/nabilshafi/Superheroes.git
 
 - Go to project directory
 
