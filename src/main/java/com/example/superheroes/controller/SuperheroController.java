@@ -2,11 +2,9 @@ package com.example.superheroes.controller;
 
 import com.example.superheroes.model.SuperHeroDTO;
 import com.example.superheroes.service.SuperheroService;
-import org.apache.catalina.connector.Response;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.validation.Errors;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
@@ -20,7 +18,6 @@ public class SuperheroController {
 
     @PostMapping("/superhero")
     public  ResponseEntity<String> createTestCase(@Valid @RequestBody SuperHeroDTO superHeroDTO) {
-
 
         superheroService.saveSuperhero(superHeroDTO);
 

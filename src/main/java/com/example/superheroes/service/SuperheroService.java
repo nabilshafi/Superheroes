@@ -17,13 +17,11 @@ public class SuperheroService {
 
         superheroRepo.save(superHeroDTO);
 
-
     }
 
     public List<SuperHeroDTO> getSuperhero(String name){
 
         return  superheroRepo.findByName(name);
-
 
     }
 
